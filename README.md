@@ -1,0 +1,1 @@
+In This Project we have used dependancy injection. Using Dependancy Injection we are performing Insert Product , Delete Product , Update Product , Display Product also we are using for product filter and using Procedure we are performing Cruid Operation. The technology used for MVC using .NET CORE 5.0
