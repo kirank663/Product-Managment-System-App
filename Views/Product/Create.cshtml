@@ -1,0 +1,51 @@
+﻿@using ProductManagmentApp.ViewModel
+@model ProductViewModel
+@{
+    ViewData["Title"] = "Create Product";
+}
+
+<div class="container shadow p-5">
+    <div class="row  pb-2">
+        <h1>Add Product</h1>
+    </div>
+
+
+    <form method="post" class="form-floating">
+
+        <div class="form-floating mb-3">
+            <label asp-for="Name">Name</label>
+            <input type="text" class="form-control" asp-for="Name" placeholder="Enter product name" />          
+            <span asp-validation-for="Name" class="alert-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <label asp-for="Description">Description</label>
+            <input type="text" class="form-control" asp-for="Description" placeholder="Enter category name" />       
+            <span asp-validation-for="Description" class="alert-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <label asp-for="Price">Price</label>
+            <input type="text" class="form-control" asp-for="Price" placeholder="Enter Price Name" />          
+            <span asp-validation-for="Price" class="alert-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <label asp-for="CategoryId">Category</label>
+            <select class="form-select single-select dropdown" asp-for="CategoryId" asp-items="Model.Category"></select>            
+            <span asp-validation-for="CategoryId" class="alert-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <label asp-for="Color">Color</label>
+            <input type="text" class="form-control" asp-for="Color" placeholder="Enter Product Color" />
+            <span asp-validation-for="Color" class="alert-danger"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <label asp-for="Image">ImageURL</label>
+            <input type="text" class="form-control" asp-for="Image" placeholder="Enter Image URL">            
+            <span asp-validation-for="Image" class="alert-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <a asp-controller="Product" asp-action="Index" class="btn btn-primary">Back To List</a>
+    </form>
+</div>
